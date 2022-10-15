@@ -70,6 +70,9 @@
     font-style: italic;
     font-family: 'Abel', sans-serif;
 }
+.desplegable {
+    display: none;
+}
 
                                             /* MODIFICACIONES PARA CUERPO DE PAGINAS */
 #cuerpo-paginas {
@@ -95,10 +98,16 @@
     gap: 20px 20px;
 }
 .cart {
-    width: 150px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: hsl(0, 0%, 83%, 70%);
+    border-radius: 10px;
+}
+.cart-cuerpo {
+    margin: 10px;
 }
 .cart-titulo {
     margin: 10px;
@@ -144,6 +153,8 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background-color: hsl(0, 0%, 83%, 70%);
+    border-radius: 10px;
 }
 .formulario-bloques {
     width: 90%;
@@ -196,26 +207,32 @@
 .casillero-items {
     width: 70%;
     text-align: left;
-    background-color: hsl(0, 0%, 0%, 10%);
-    border-radius: 5px;
+    background-color: hsl(0, 0%, 83%, 70%);
+    border-radius: 10px;
+}
+.signo {
+    display: none;
 }
 .casillero-precio {
     width: 10%;
     text-align: center;
-    background-color: hsl(0, 0%, 0%, 10%);
-    border-radius: 5px;
+    background-color: hsl(0, 0%, 83%, 70%);
+    border-radius: 10px;
+}
+.cant {
+    display: none;
 }
 .casillero-cantidad {
     width: 6%;
     text-align: center;
-    background-color: hsl(0, 0%, 0%, 10%);
-    border-radius: 5px;
+    background-color: hsl(0, 0%, 83%, 70%);
+    border-radius: 10px;
 }
 .casillero-total {
     width: 12%;
     text-align: center;
-    background-color: hsl(0, 0%, 0%, 10%);
-    border-radius: 5px;
+    background-color: hsl(0, 0%, 83%, 70%);
+    border-radius: 10px;
 }
 .box {
     display: flex;
@@ -223,7 +240,7 @@
     font-size: 15px;
     font-weight: lighter;
     height: 30px;
-    margin-top: 10px;
+    margin: 5px;
     background-color: hsl(0, 0%, 100%, 70%);
     border-radius: 5%; border-style: solid; border-color: hsl(0, 0%, 0%, 30%);
 }
@@ -282,7 +299,7 @@
     font-weight: lighter;
 }
 .footer-social-red{
-    margin-right: 50px;
+    margin-right: 10px;
     margin-top: 10px;
 }
 .footer-social-red img {
@@ -290,4 +307,602 @@
 }
 .footer-social-red label {
     margin: 10px;
+}
+
+
+                                            /* RESPONSIVE TABLET */
+
+@media (max-width: 768px) {
+    .body {
+        background-image: url(../assets/Fondo/Fondo\ 01.jpg); /*fondo para la pagina*/
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr 80px;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    }
+    .header {
+        grid-area: header;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: hsl(351, 100%, 86%, 70%); /*fondo del navegador*/
+        position: fixed;
+        width: 100%;
+    }
+    .main {
+        grid-area: main;
+    }
+    .footer {
+        grid-area: footer;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: hsl(0, 0%, 83%, 60%);
+    }
+    
+    
+                                                /* MODIFICACIONES PARA EL HEADER */
+    .encabezado-logo {
+        margin-left: 10px;  /*separacioon izquierda de la pantalla*/
+        width: 40px;
+    }
+    .encabezado-titulo {
+        display: inline-block;
+        list-style: none;
+        text-align: center;
+        width: 120px;
+        font-family: 'Dancing Script', cursive;
+    }
+    .titulo {
+        font-style: italic;
+        font-weight: bold; 
+        font-size: 25px;  /*tamaño de la letra*/
+    }
+    .subtitulo {
+        font-style: italic;
+        font-weight: lighter; 
+        font-size: 15px; 
+    }
+    .pages {
+        margin-right: 10px;  /*separacion derecha de la pantalla*/
+    }
+    .pages-titulo {
+        text-decoration: none;  /*sacarle el subrayado del enlace*/
+        color: black;  /*color del texto*/
+        margin: 5px;  /*separacion dentro de las cajas de cada pagina*/
+        font-style: italic;
+        font-family: 'Abel', sans-serif;
+    }
+    .desplegable {
+        display: none;
+    }
+    
+                                                /* MODIFICACIONES PARA CUERPO DE PAGINAS */
+    #cuerpo-paginas {
+        margin-top: 40px;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 40px;
+        background-color: hsl(0, 0%, 83%, 30%);
+        font-family: 'ABeeZee', sans-serif;
+    }
+    .cuerpo-paginas-titulo {
+        text-align: center;
+        font-size: 20px;
+        background-color: hsl(351, 100%, 86%, 30%);
+    }
+    
+                                                /* CART DE PRODUCTOS */
+    .cuerpo-paginas-cart {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 20px 20px;
+    }
+    .cart {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        background-color: hsl(0, 0%, 83%, 70%);
+        border-radius: 10px;
+    }
+    .cart-cuerpo {
+        margin: 10px;
+    }
+    .cart-titulo {
+        margin: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .cart-description {
+        display: inline-block;
+        list-style: none;
+        margin: auto;
+        font-size: 15px;
+        text-align: left;
+    }
+    .cart-precio {
+        margin: 5px;
+        text-align: left;
+        font-weight: bold;
+    }
+    .cart-boton {
+        margin: 5px;
+        align-self: center;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 15px;
+        color: black;
+        width: 100px;
+        height: 20px;
+        background-color: hsl(180, 100%, 94%, 30%);
+        border-radius: 10px; border-style: solid; border-color: hsl(180, 100%, 94%, 10%);
+    }
+    
+    
+    
+                                                /* FORMULARIO DE CONTACTO */
+    .formulario {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: hsl(0, 0%, 83%, 70%);
+        border-radius: 10px;
+    }
+    .formulario-bloques {
+        width: 90%;
+        height: 30px;
+        margin: 5px;
+        border-radius: 5px;
+        background-color: hsl(0, 0%, 100%, 50%);
+    }
+    .mensaje {
+        height: 100px;
+    }
+    .formulario-boton {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        height: 30px;
+        width: 20%;
+        text-align: center;
+        font-weight: bold;
+        border-color: hsl(0, 0%, 57%); border-style: solid; border-radius: 10px;
+        background-color: hsl(0, 0%, 83%, 60%);
+    }
+    
+    
+                                                /* FORMULARIO DE CARRITO */
+    .cuerpo-paginas-carrito {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    
+    .seguir-comprando {
+        text-decoration: none;
+        color: black;
+        margin: 10px;
+        text-align: left;
+        font-style: italic;
+        text-decoration: underline;
+    }
+    
+    .compras-casilleros {
+        margin: 10px;
+    }
+    .casilleros {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 20px;
+    }
+    .casillero-items {
+        width: 60%;
+        text-align: left;
+        background-color: hsl(0, 0%, 83%, 70%);
+        border-radius: 10px;
+    }
+    .signo {
+        display: none;
+    }
+    .casillero-precio {
+        width: 10%;
+        text-align: center;
+        background-color: hsl(0, 0%, 83%, 70%);
+        border-radius: 10px;
+    }
+    .cantidad {
+        display: none;
+    }
+    .cant {
+        display: inline;
+    }
+    .casillero-cantidad {
+        width: 10%;
+        text-align: center;
+        background-color: hsl(0, 0%, 83%, 70%);
+        border-radius: 10px;
+    }
+    .casillero-total {
+        width: 15%;
+        text-align: center;
+        background-color: hsl(0, 0%, 83%, 70%);
+        border-radius: 10px;
+    }
+    .box {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        font-weight: lighter;
+        height: 30px;
+        margin: 5px;
+        background-color: hsl(0, 0%, 100%, 70%);
+        border-radius: 5%; border-style: solid; border-color: hsl(0, 0%, 0%, 30%);
+    }
+    
+    
+                                                /* MODIFICACIONES PARA EL FOOTER */
+    .footer-logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 200px;
+        margin-left: 10px;
+    }
+    .footer-logo-imagen {
+        width: 40px;
+    }
+    .footer-logo-texto {
+        display: inline-block;
+        list-style: none;
+        text-align: center;
+        width: 120px;
+    }
+    .logo-titulo {
+        font-style: italic;
+        font-weight: bold;
+        font-family: 'Dancing Script', cursive;
+    }
+    .logo-subtitulo {
+        font-style: italic;
+        font-weight: lighter; 
+        font-family: 'Dancing Script', cursive;
+    }
+    
+    .footer-horarios {
+        display: none;
+    }
+    
+    .footer-social{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        font-size: 12px;
+        font-family: 'ABeeZee', sans-serif;
+        font-weight: lighter;
+    }
+    .footer-social-red{
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    .footer-social-red img {
+        width: 13px;
+    }
+    .footer-social-red label {
+        margin: 10px;
+    }
+
+}
+
+
+
+
+                                            /* RESPONSIVE PHONE */
+
+
+
+@media (max-width: 576px) {
+    .body {
+        background-image: url(../assets/Fondo/Fondo\ 01.jpg) ; /*fondo para la pagina*/
+        display: grid;
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr 80px;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    }
+    .header {
+        grid-area: header;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: hsl(351, 100%, 86%, 70%); /*fondo del navegador*/
+        position: fixed;
+        width: 100%;
+    }
+    .main {
+        grid-area: main;
+    }
+    .footer {
+        grid-area: footer;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: hsl(0, 0%, 83%, 60%);
+    }
+    
+    
+                                                /* MODIFICACIONES PARA EL HEADER */
+    .encabezado-logo {
+        margin-left: 10px;  /*separacioon izquierda de la pantalla*/
+        width: 40px;
+    }
+    .encabezado-titulo {
+        display: inline-block;
+        list-style: none;
+        text-align: center;
+        width: 100px;
+        font-family: 'Dancing Script', cursive;
+    }
+    .titulo {
+        font-style: italic;
+        font-weight: bold; 
+        font-size: 25px;  /*tamaño de la letra*/
+    }
+    .subtitulo {
+        font-style: italic;
+        font-weight: lighter; 
+        font-size: 15px; 
+    }
+    .pages {
+        display: none;
+    }
+    .desplegable {
+        display: flex;
+    }
+    .bottom-imagen {
+        width: 40px;
+        margin-right: 10px;
+    }
+    .bottom-pages {
+        position: absolute;
+        left: 0;
+        display: none;
+    }
+    .bottom-imagen:hover > .bottom-pages{
+        display: flex;
+    }
+    .bottom-pages-flex {
+        display: flex;
+    }
+    
+                                                /* MODIFICACIONES PARA CUERPO DE PAGINAS */
+    #cuerpo-paginas {
+        margin-top: 40px;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 40px;
+        background-color: hsl(0, 0%, 83%, 30%);
+        font-family: 'ABeeZee', sans-serif;
+    }
+    .cuerpo-paginas-titulo {
+        text-align: center;
+        font-size: 20px;
+        background-color: hsl(351, 100%, 86%, 30%);
+    }
+    
+                                                /* CART DE PRODUCTOS */
+    .cuerpo-paginas-cart {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        gap: 20px 20px;
+    }
+    .cart {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        background-color: hsl(0, 0%, 83%, 70%);
+        border-radius: 10px;
+    }
+    .cart-cuerpo {
+        margin: 10px;
+    }
+    .cart-titulo {
+        margin: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .cart-description {
+        display: inline-block;
+        list-style: none;
+        margin: auto;
+        font-size: 15px;
+        text-align: left;
+    }
+    .cart-precio {
+        margin: 5px;
+        text-align: left;
+        font-weight: bold;
+    }
+    .cart-boton {
+        margin: 5px;
+        align-self: center;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 15px;
+        color: black;
+        width: 100px;
+        height: 20px;
+        background-color: hsl(180, 100%, 94%, 30%);
+        border-radius: 10px; border-style: solid; border-color: hsl(180, 100%, 94%, 10%);
+    }
+    
+    
+    
+                                                /* FORMULARIO DE CONTACTO */
+    .formulario {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: hsl(0, 0%, 83%, 70%);
+        border-radius: 10px;
+    }
+    .formulario-bloques {
+        width: 90%;
+        height: 30px;
+        margin: 5px;
+        border-radius: 5px;
+        background-color: hsl(0, 0%, 100%, 50%);
+    }
+    .mensaje {
+        height: 100px;
+    }
+    .formulario-boton {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        height: 30px;
+        width: 20%;
+        text-align: center;
+        font-weight: bold;
+        border-color: hsl(0, 0%, 57%); border-style: solid; border-radius: 10px;
+        background-color: hsl(0, 0%, 83%, 60%);
+    }
+    
+    
+                                                /* FORMULARIO DE CARRITO */
+    .cuerpo-paginas-carrito {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    
+    .seguir-comprando {
+        text-decoration: none;
+        color: black;
+        margin: 10px;
+        text-align: left;
+        font-style: italic;
+        text-decoration: underline;
+    }
+    
+    .compras-casilleros {
+        margin: 10px;
+    }
+    .casilleros {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 5px;
+    }
+    .casillero-items {
+        width: 60%;
+        text-align: left;
+        background-color: hsl(0, 0%, 83%, 70%);
+        border-radius: 10px;
+    }
+    .precio {
+        display: none;
+    }
+    .signo {
+        display: inline;
+    }
+    .casillero-precio {
+        width: 10%;
+        text-align: center;
+        background-color: hsl(0, 0%, 83%, 70%);
+        border-radius: 10px;
+    }
+    .cantidad {
+        display: none;
+    }
+    .cant {
+        display: inline;
+    }
+    .casillero-cantidad {
+        width: 10%;
+        text-align: center;
+        background-color: hsl(0, 0%, 83%, 70%);
+        border-radius: 10px;
+    }
+    .casillero-total {
+        width: 15%;
+        text-align: center;
+        background-color: hsl(0, 0%, 83%, 70%);
+        border-radius: 10px;
+    }
+    .box {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        font-weight: lighter;
+        height: 10%px;
+        margin: 5px;
+        background-color: hsl(0, 0%, 100%, 70%);
+        border-radius: 5%; border-style: solid; border-color: hsl(0, 0%, 0%, 30%);
+    }
+    
+    
+                                                /* MODIFICACIONES PARA EL FOOTER */
+    .footer-logo-imagen {
+        width: 60px;
+    }
+    .footer-logo-texto {
+        display: none;
+    }  
+    .footer-horarios {
+        display: none;
+    }
+    
+    .footer-social{
+        width: 200px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-around;
+        align-content: center;
+    }
+    .footer-social-red{
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    .footer-social-red img {
+        width: 20px;
+    }
+    .footer-social-red label {
+        display: none;
+    }
+
 }
