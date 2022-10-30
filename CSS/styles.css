@@ -181,100 +181,153 @@
 
                                             /* FORMULARIO DE CARRITO */
 .cuerpo-paginas-carrito {
-    display: grid;
-    grid-template-columns: 5fr 0.8fr 0.5fr 1fr;
-    grid-template-rows: 0,5fr 4fr 1fr 1fr;
-    grid-template-areas: 
-    "seguircomprando seguircomprando seguircomprando seguircomprando"
-    "casproductos casprecio cascantidad castotal"
-    ". . total total"
-    ". . . comprar";
-    height: 100%;
-    gap: 20px;
-    margin: 20px;
-    font-size: 15px;
+    margin: 25px;
+    text-decoration: none;
 }
 
 .seguir-comprando {
-    grid-area: seguircomprando;
     text-decoration: none;
     color: black;
     text-align: left;
     font-style: italic;
     text-decoration: underline;
 }
-.casillero-items {
-    grid-area: casproductos;
-    text-align: left;
-    background-color: hsl(0, 0%, 83%, 70%);
-    border-radius: 10px;
+.carrito-productos {
+    margin-top: 25px;
 }
-.signo {
-    display: none;
-}
-.casillero-precio {
-    grid-area: casprecio;
-    text-align: center;
-    background-color: hsl(0, 0%, 83%, 70%);
-    border-radius: 10px;
-}
-.cant {
-    display: none;
-}
-.casillero-cantidad {
-    grid-area: cascantidad;
-    text-align: center;
-    background-color: hsl(0, 0%, 83%, 70%);
-    border-radius: 10px;
-}
-.casillero-total {
-    grid-area: castotal;
-    text-align: center;
-    background-color: hsl(0, 0%, 83%, 70%);
-    border-radius: 10px;
-}
-.total {
-    grid-area: total;
-    align-self: flex-end;
-    background-color: hsl(0, 0%, 83%, 70%);
-    border-radius: 10px;
-}
-.total-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "p total-box"
-    ;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-.total-container span{
-    grid-area: p;
-    margin: 10px;
-}
-.total-box {
-    grid-area: total-box;
-    font-size: 15px;
-    font-weight: lighter;
-    height: 30px;
-    margin: 5px;
-    background-color: hsl(0, 0%, 100%, 70%);
-    border-radius: 5%; border-style: solid; border-color: hsl(0, 0%, 0%, 30%);
-}
-.comprar {
-    grid-area: comprar;
-}
-.box {
+
+.caja-productos{
+    list-style: none;
     display: flex;
-    align-items: center;
-    font-weight: lighter;
-    height: 30px;
-    margin: 5px;
-    background-color: hsl(0, 0%, 100%, 70%);
-    border-radius: 5%; border-style: solid; border-color: hsl(0, 0%, 0%, 30%);
+    justify-content: flex-start;
+    text-align: left;
+    margin: 10px;
+    background-color: hsl(0, 0%, 83%, 70%);
+    border-radius: 10px;
 }
+.caja-imagen {
+    padding: 5px;
+    padding-right: 15px;
+}
+.imagen img{
+    width: 60px;
+}
+
+
+.caja-productos-textos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+.textos-tiutloproducto-precio {
+    display: flex;
+    justify-content: space-between;
+}
+.tiutloproducto {
+    padding: 5px;
+    font-size: 18px;
+    text-decoration: underline;
+}
+.precio {
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.textos-quitar-cantidad {
+    display: flex;
+    justify-content: space-between;
+}
+.quitar {
+    padding: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 0.6em;
+    border: 0px;
+    outline: 0px;
+    text-align: center;
+    background-color: inherit;
+    color: hsl(0, 100%, 74%);
+    text-decoration: underline;
+}
+.cantidad {
+    padding: 5px;
+}
+.cantidad h6 {
+    font-size: 12px;
+    font-weight: lighter;
+}
+.restar {
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 0.6em;
+    border: 0px;
+    outline: 0px;
+    text-align: center;
+    background-color: inherit;
+    color: hsl(0, 100%, 74%);
+}
+.sumar {
+    padding-left: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 0.6em;
+    border: 0px;
+    outline: 0px;
+    text-align: center;
+    background-color: inherit;
+    color: hsl(0, 100%, 74%);
+}
+
+
+
+.linea {
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+    height: 3px;
+    flex-shrink: 0;
+    background-color: hsl(0, 0%, 83%, 70%);
+    list-style: none;
+}
+
+
+
+.subtotal-caja {
+    list-style: none;
+    margin: 0 10px 10px 10px;
+}
+.subtotal-caja-elemntos {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 18px;
+    font-weight: bold;
+}
+.subtotal {
+    padding: 5px;
+    padding-right: 10%;
+}
+.numero {
+    padding: 5px;
+}
+
+.boton-comprar {
+    padding-bottom: 25px;
+    list-style: none;
+    text-align: center;
+}
+.boton {
+    padding: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    outline: 0px;
+    text-align: center;
+    background-color: hsl(0, 0%, 83%, 70%);;
+    border-radius: 5px;
+}
+
 
 
                                             /* MODIFICACIONES PARA EL FOOTER */
